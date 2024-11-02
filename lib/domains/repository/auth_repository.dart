@@ -14,9 +14,9 @@ class AuthRepository{
   AuthRepository(this.dioClient);
 
 
-  Future<LoginVerification> register(RegisterRequest registerObject) async {
+  Future<LoginVerification> register(RegisterRequest registerRequest) async {
       print(dioClient.dio.options.baseUrl);
-      final response = await dioClient.dio.post('/account/register/', data: registerObject.toMap());
+      final response = await dioClient.dio.post('/account/register/', data: registerRequest.toMap());
       print("register ${response.data}");
       if (response.statusCode == HttpStatus.ok) {
         // User user = User.fromJson(response.data);
@@ -24,7 +24,9 @@ class AuthRepository{
 
         final token = response.data['access'];
         final refreshToken = response.data['refresh'];
-        
+        Get.find<EncryptedStorage>().setRefreshToken(refreshToken);
+        Get.find<EncryptedStorage>().setToken(token);
+
         Get.find<EncryptedStorage>().setRefreshToken(refreshToken);
         Get.find<EncryptedStorage>().setToken(token);
         return LoginVerification.CREATED;

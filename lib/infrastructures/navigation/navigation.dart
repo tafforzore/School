@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import 'package:school/presentation/register/controllers/register_page.controller.dart';
 import '../../presentation/forget_password_page/forget_password_page_view.dart';
+import '../../presentation/introduction_screen/introduction.screen.dart';
 import '../../presentation/screens.dart';
 import '../../presentation/splash/splash_view.dart';
 import 'bindings/controllers/controllers_bindings.dart';
@@ -66,7 +66,7 @@ class Nav {
     ),
     GetPage(
       name: Routes.INTRODUCTION_SCREENS,
-      page: () =>  IntroductionScreen(),
+      page: () =>   IntroductionScreen(),
       binding: DealsDetailsPageControllerBinding(),
     ),
     GetPage(

@@ -13,8 +13,8 @@ class AuthServices {
     return await authRepository.register(registerObject);
   }
 
-  Future<LoginVerification> login({required LoginRequest loginObject}) async {
-    return await authRepository.login(loginObject);
+  Future<LoginVerification> login({required LoginRequest loginRequest}) async {
+    return await authRepository.login(loginRequest);
   }
 
   //Carts--------------------------------------------------------------------------------------------------
@@ -92,4 +92,5 @@ class AuthServices {
   Future<LoginVerification> newStudent({required LoginRequest loginObject}) async{
     return await authRepository.login(loginObject);
   }
+
 }

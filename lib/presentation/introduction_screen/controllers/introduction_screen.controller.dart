@@ -7,8 +7,10 @@ class IntroductionScreenController extends GetxController with SingleGetTickerPr
 
   late TabController tabController;
   RxBool transition = false.obs;
+  RxBool translate = false.obs;
   RxString next = 'Suivant'.obs;
   // final TabController controlle = DefaultTabController.of(context);
+
 
   final count = 0.obs;
   @override

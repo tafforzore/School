@@ -41,15 +41,26 @@ class LoginPageScreen extends GetView<LoginPageController> {
                             style: TextStyle(fontSize: titleSize, fontWeight: FontWeight.bold, color: primaryColor),
                           ),
                           SizedBox(height: textSize),
+                          Obx(() {
+                            return Text(
+                              controller.error.value,
+                              style: TextStyle(fontSize: textSize,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.red),
+                            );
+                          }),
+                          SizedBox(height: textSize),
                           TextField(
+                            controller: controller.username,
                             decoration: InputDecoration(
-                              labelText: "Email",
+                              labelText: "Username",
                               border:  OutlineInputBorder(borderRadius: BorderRadius.circular(30), gapPadding: 10),
                               labelStyle: TextStyle(fontSize: textSize,color: primaryColor),
                             ),
                           ),
                           SizedBox(height: textSize),
                           TextField(
+                            controller: controller.password,
                             obscureText: true,
                             decoration: InputDecoration(
                               labelText: "Password",
@@ -86,8 +97,7 @@ class LoginPageScreen extends GetView<LoginPageController> {
                               ),
                               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                             ),
-                            onPressed: () {
-                            },
+                            onPressed:controller.loginAction,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               mainAxisSize: MainAxisSize.max,

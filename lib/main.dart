@@ -11,6 +11,7 @@ import 'infrastructures/navigation/routes.dart';
 import 'infrastructures/network/dio_client.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   initDio();
   initLocalStorage();
   runApp(const SchoolApp());
@@ -44,10 +45,11 @@ class SchoolApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           smartManagement: SmartManagement.onlyBuilder,
           title: 'AIC',
-          initialRoute: Routes.SPLASH,
+          initialRoute: Routes.HOME_PAGE,
           getPages: Nav.routes,
-          theme: ThemeData(
-                textTheme: const TextTheme(
+          theme:  ThemeData(
+            fontFamily: 'Monsterrat',
+                textTheme: const  TextTheme(
                     bodyMedium: TextStyle(
                       fontSize: 18,
                       letterSpacing: 1,

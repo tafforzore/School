@@ -36,6 +36,19 @@ dependencies:
   sizer: ^3.0.0
   google_fonts: ^6.2.1
   cached_network_image: ^3.4.1
+  fade_shimmer: ^2.0.1
+  # qr_code_scanner: ^0.6.1
+  scrollable_positioned_list: ^0.2.3
+  socket_io_client: ^1.0.2
+  grouped_list: ^4.2.0
+  concentric_transition: 1.0.1
+  dotted_line: ^3.1.0
+  url_launcher: ^6.0.20
+  google_nav_bar: ^5.0.6
+  path_provider: ^2.0.9
+  markdown_widget: ^1.2.8
+  provider: ^6.0.2
+  fluentui_system_icons: ^1.1.153
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -44,6 +57,7 @@ dependencies:
   font_awesome_flutter: ^10.7.0
   encrypted_storage: ^0.1.3
   encrypt_shared_preferences: ^0.8.0
+  animate_do: ^3.3.4
 
 dev_dependencies:
   flutter_test:
