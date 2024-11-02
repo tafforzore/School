@@ -1,1 +1,0 @@
- C:\\Users\\SEVERIN\\Desktop\\projet\\schoolapp\\.dart_tool\\flutter_build\\a41f884309140a4fbca72718d0e8a240\\native_assets.yaml: 
